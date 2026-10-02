@@ -1,0 +1,630 @@
+# Issue No. 02 · October 2026 · The landmark cases
+- id: c01
+  category:
+  - health
+  place: USA
+  figure: '17'
+  figure_note: doctors seen over three years before an answer
+  headline: A mother found her son's diagnosis
+  who: Courtney and her son Alex, aged 4 when symptoms began
+  paragraphs:
+  - 'Alex had chronic pain that no specialist could explain. His mother typed his MRI notes into ChatGPT line by line, including the detail that he refused to sit cross‑legged. It suggested tethered cord syndrome. She took that to a new neurosurgeon, who confirmed it on the scans: a hidden spina bifida with a tethered spine. Alex had corrective surgery and is recovering.'
+  quote: ''
+  care: the AI did not diagnose Alex. It gave a parent a lead that a specialist then confirmed. Doctors interviewed in coverage stress that chatbots are no substitute for medical care.
+  stamp: News
+  links:
+  - label: TODAY interview, via Radiology Business
+    url: https://radiologybusiness.com/topics/artificial-intelligence/after-seeing-17-different-doctors-boy-rare-condition-receives-diagnosis-chatgpt
+  trace:
+    title: A general chatbot as a second opinion
+    area: Health
+    summary: A mother used an everyday chatbot to connect clues that 17 specialists, each looking at their own area, had not put together.
+    facts:
+    - label: The problem
+      text: Three years of unexplained pain in a young child, and no one doctor looking at the whole picture.
+    - label: AI used
+      text: ChatGPT, a free general‑purpose chatbot. Nothing medical was added to it.
+    - label: What goes in
+      text: MRI report notes typed in line by line, plus everyday observations, such as Alex refusing to sit cross‑legged.
+    - label: What comes out
+      text: 'A suggested condition to investigate: tethered cord syndrome.'
+    - label: Who checks it
+      text: A neurosurgeon, who reviewed the existing MRI images.
+    - label: Cost to the family
+      text: None beyond the free sign‑up.
+    steps:
+    - role: person
+      text: 'Courtney gathers every record she has: MRI notes, symptoms, and behaviours no specialist had linked.'
+    - role: ai
+      text: The chatbot reads it all together and suggests tethered cord syndrome, a condition tied to a hidden form of spina bifida.
+    - role: person
+      text: She researches the condition and joins a Facebook group of families whose children have it. The patterns match.
+    - role: expert
+      text: 'A new neurosurgeon looks at the scans already taken and confirms it: occult spina bifida with a tethered spine.'
+    - role: outcome
+      text: Alex has surgery to release the cord and begins recovering.
+    worked: The AI looked across specialties at once, and the answer was already sitting in scans the family had.
+    limits: Chatbots can be confidently wrong. This worked because the suggestion went to a specialist, not straight to treatment.
+    sources:
+    - label: TODAY interview, via Radiology Business
+      url: https://radiologybusiness.com/topics/artificial-intelligence/after-seeing-17-different-doctors-boy-rare-condition-receives-diagnosis-chatgpt
+    clinical: true
+    tools:
+    - label: Models
+      text: Claude, GPT‑4o or Gemini (hosted), or Llama and Mistral run locally with Ollama
+    - label: Reading reports
+      text: PyMuPDF or Tesseract OCR to pull text out of scanned reports
+    - label: Medical knowledge
+      text: Human Phenotype Ontology (HPO) to map symptoms, and Orphanet for rare conditions
+    - label: Interface
+      text: Streamlit or Gradio for a simple upload‑and‑ask web app
+- id: c02
+  category:
+  - health
+  - ability
+  place: USA
+  figure: 97%
+  figure_note: of his intended words decoded correctly
+  headline: A man with ALS spoke in his own voice again
+  who: Casey Harrell, 45, BrainGate clinical trial, UC Davis Health
+  paragraphs:
+  - ALS had left Casey understood only by his care partner, at about seven words a minute. Surgeons implanted sensors in the speech region of his brain in July 2023. AI models turn the signals into words, which are read aloud in a voice rebuilt from recordings made before his illness. By his second day he was using a 125,000‑word vocabulary.
+  quote: '"I have absolutely loved talking to my friends and family again."'
+  care: ''
+  stamp: Peer‑reviewed · NEJM
+  links:
+  - label: Brown University
+    url: https://www.brown.edu/news/2024-08-14/bci-speak-again
+  - label: Reuters, via The Daily Star
+    url: https://www.thedailystar.net/tech-startup/news/asl-patient-can-speak-again-thanks-brain-implant-3677831
+  trace:
+    title: Brain signals turned into his own voice
+    area: Disability
+    summary: Sensors in Casey Harrell's brain pick up the commands his brain sends to his speech muscles, and AI turns them into spoken words.
+    facts:
+    - label: The problem
+      text: ALS left Casey understood only by his care partner, at about seven words a minute. Everyday talk runs near 160.
+    - label: AI used
+      text: Neural networks trained on Casey's own brain activity, a language model, and text‑to‑speech built from old recordings of his voice.
+    - label: What goes in
+      text: Electrical activity from four microelectrode arrays in the speech area of his brain.
+    - label: What comes out
+      text: Words on a screen, read aloud in a voice that sounds like Casey before ALS.
+    - label: Who checks it
+      text: The BrainGate clinical trial team at UC Davis Health.
+    - label: Status
+      text: Research trial, published in the New England Journal of Medicine, 2024.
+    steps:
+    - role: expert
+      text: 'July 2023: surgeons implant four microelectrode arrays in the left precentral gyrus, the area that coordinates speech.'
+    - role: person
+      text: Casey tries to speak. The system reads the commands sent to his speech muscles, not his private thoughts.
+    - role: ai
+      text: A neural network turns the signal patterns into phonemes, the small units of sound that make up words.
+    - role: ai
+      text: A language model assembles the phonemes into the most likely words, drawing on a 125,000‑word vocabulary.
+    - role: ai
+      text: Text‑to‑speech trained on recordings of his pre‑ALS voice reads each sentence aloud.
+    - role: outcome
+      text: About 97% of words decoded correctly. He was using it within minutes on the first day, and talks with family and friends again.
+    worked: Decoding attempted muscle movements is more reliable than guessing thoughts, and a personal voice made the output feel like him.
+    limits: It requires brain surgery and is still a research trial, not standard care.
+    sources:
+    - label: Brown University
+      url: https://www.brown.edu/news/2024-08-14/bci-speak-again
+    - label: Reuters, via The Daily Star
+      url: https://www.thedailystar.net/tech-startup/news/asl-patient-can-speak-again-thanks-brain-implant-3677831
+    clinical: true
+    tools:
+    - label: Practice data
+      text: Public intracortical speech datasets released by the BrainGate team (Brain‑to‑Text benchmarks)
+    - label: Decoding
+      text: PyTorch recurrent networks that output phonemes, with CTC decoding
+    - label: Language model
+      text: KenLM n‑gram models or a small open LLM to pick the likeliest sentence
+    - label: Personal voice
+      text: Coqui XTTS or Piper to build a voice from old recordings
+- id: c03
+  category:
+  - health
+  - ability
+  place: Switzerland
+  figure: 100 m
+  figure_note: walked on a good day, after a decade of paralysis
+  headline: A paralysed cyclist stood up and walked
+  who: Gert‑Jan Oskam, 40, Dutch engineer
+  paragraphs:
+  - A bike accident left Gert‑Jan unable to take a step. Researchers in Lausanne and Grenoble implanted one device over his brain and another on his spinal cord, and used an AI decoder to read his intention to move and pass it to the spine. He can now stand, walk and climb stairs, and has recovered some movement even with the device switched off.
+  quote: '"This simple pleasure represents a major change in my life," he said of standing at a bar with friends.'
+  care: ''
+  stamp: Peer‑reviewed · Nature
+  links:
+  - label: CEA (French public research body)
+    url: https://www.cea.fr/english/Pages/News/brain-computer-interface-enables-thought-controlled-walking-after-spinal-cord-injury.aspx
+  - label: ITV News
+    url: https://itv.com/news/2023-05-24/new-brain-technology-helps-paralysed-man-walk-again
+  trace:
+    title: A digital bridge across a spinal injury
+    area: Disability
+    summary: Two implants and an AI decoder carry Gert‑Jan Oskam's intention to move past the break in his spinal cord.
+    facts:
+    - label: The problem
+      text: A cycling accident severed the link between his brain and the nerves that move his legs.
+    - label: AI used
+      text: Adaptive decoding algorithms that learn, in real time, which movement he is trying to make.
+    - label: What goes in
+      text: Brain signals recorded by WIMAGINE implants over the brain region that controls the legs.
+    - label: What comes out
+      text: Stimulation commands sent wirelessly to an implant on the spinal cord below the injury.
+    - label: Who checks it
+      text: Neurosurgeons and rehabilitation staff at CHUV and EPFL in Lausanne.
+    - label: Status
+      text: Single‑participant study, published in Nature, 2023.
+    steps:
+    - role: expert
+      text: Surgeons place WIMAGINE devices, developed by the French research agency CEA, above the leg area of the brain, and electrodes on the spinal cord.
+    - role: person
+      text: Gert‑Jan thinks about moving his hips, knees or ankles.
+    - role: ai
+      text: Algorithms decode the intention from his brain signals and predict which muscles he wants to use.
+    - role: ai
+      text: A portable unit sends the command wirelessly to the spinal implant, which stimulates the right muscles at the right moment.
+    - role: expert
+      text: He trains with the bridge in rehabilitation. Some nerve function returns, and he can move a little even with the system off.
+    - role: outcome
+      text: He stands, walks 100 metres or more, climbs stairs, and can stand at a bar with friends.
+    worked: The system adapts to him quickly. He said he could control his hips within 5 to 10 minutes on the second day.
+    limits: One participant, two surgeries, and the walking is still tiring. Wider trials are needed.
+    sources:
+    - label: CEA (French public research body)
+      url: https://www.cea.fr/english/Pages/News/brain-computer-interface-enables-thought-controlled-walking-after-spinal-cord-injury.aspx
+    - label: ITV News
+      url: https://itv.com/news/2023-05-24/new-brain-technology-helps-paralysed-man-walk-again
+    clinical: true
+    tools:
+    - label: Hardware stand‑in
+      text: A non‑invasive EEG headset such as OpenBCI or Muse
+    - label: Signal tools
+      text: BrainFlow to stream data, MNE‑Python to clean and analyse it
+    - label: Practice data
+      text: PhysioNet EEG Motor Movement/Imagery dataset; the MOABB benchmark
+    - label: Output
+      text: Drive a simulated leg in Unity, or a servo on an Arduino
+- id: c04
+  category:
+  - health
+  place: England
+  figure: 16→48%
+  figure_note: of stroke patients recovering with little or no disability
+  headline: A retired postman walked again within weeks of a stroke
+  who: Shawn Theoff, 55, Canterbury, and stroke patients across England
+  paragraphs:
+  - When Shawn arrived at Kent and Canterbury Hospital, AI software read his brain scan in real time, helping doctors choose and start treatment fast. NHS England's early analysis links the tool with treatment starting more than an hour sooner, and with a tripling in patients who regain independence. It now runs in all 107 stroke centres in England.
+  quote: ''
+  care: the NHS describes this as an association from early analysis, not a controlled trial.
+  stamp: Public health service
+  links:
+  - label: NHS England
+    url: https://www.england.nhs.uk/blog/how-artificial-intelligence-is-helping-to-speed-up-the-diagnosis-and-treatment-of-stroke-patients
+  - label: Digital Health
+    url: https://digitalhealth.net/2024/12/all-107-stroke-centres-in-england-using-ai-technology-says-nhse
+  trace:
+    title: Faster stroke treatment from brain‑scan reading
+    area: Health
+    summary: AI reads stroke patients' brain scans the moment they're taken, so doctors anywhere can decide on treatment faster.
+    facts:
+    - label: The problem
+      text: A patient loses about two million brain cells a minute at the start of a stroke, and not every hospital has a specialist on site.
+    - label: AI used
+      text: Brainomix e‑Stroke, decision‑support software endorsed by NICE in 2024.
+    - label: What goes in
+      text: CT and CT angiography scans of the brain taken on arrival.
+    - label: What comes out
+      text: A real‑time readout showing blocked large vessels, any bleeding, and how much of the brain is affected.
+    - label: Who checks it
+      text: Stroke doctors make every treatment decision.
+    - label: Scale
+      text: In use at all 107 stroke centres in England.
+    steps:
+    - role: person
+      text: A patient like Shawn Theoff arrives with stroke symptoms and is scanned within minutes.
+    - role: ai
+      text: The software analyses the scan in real time and flags a clot or a bleed, and how much brain tissue is at risk.
+    - role: expert
+      text: Stroke specialists see the results on their phones or computers, even from another hospital.
+    - role: expert
+      text: They decide on clot‑busting drugs, a clot‑removal procedure, or a transfer to a specialist centre.
+    - role: outcome
+      text: Treatment starts more than 60 minutes sooner, and the share of patients regaining independence rose from 16% to 48%.
+    worked: It removes the wait for a specialist to see the scan in person, which matters most in the first hour.
+    limits: NHS England calls these results an association from early analysis, not a controlled trial.
+    sources:
+    - label: NHS England
+      url: https://www.england.nhs.uk/blog/how-artificial-intelligence-is-helping-to-speed-up-the-diagnosis-and-treatment-of-stroke-patients
+    - label: Digital Health
+      url: https://digitalhealth.net/2024/12/all-107-stroke-centres-in-england-using-ai-technology-says-nhse
+    clinical: true
+    tools:
+    - label: Imaging AI
+      text: MONAI (PyTorch for medical imaging) and nnU‑Net for segmentation
+    - label: Practice data
+      text: RSNA Intracranial Hemorrhage Detection and ISLES stroke lesion datasets
+    - label: Remote viewing
+      text: Orthanc DICOM server with the OHIF web viewer
+    - label: Desktop review
+      text: 3D Slicer to inspect scans and model output
+- id: c05
+  category:
+  - health
+  place: Sweden
+  figure: +29%
+  figure_note: more cancers found, with no rise in false alarms
+  headline: More women had breast cancer caught early
+  who: Over 105,000 women in Sweden's national screening programme (MASAI trial, Lund University)
+  paragraphs:
+  - Women were randomly assigned either standard double reading by radiologists or reading supported by AI. The AI group had 338 cancers found against 262, mostly small, early, node‑negative tumours. Full results in 2026 showed 12% fewer cancers turning up between screenings, the harder‑to‑treat kind, while radiologists' reading workload fell by 44%.
+  quote: ''
+  care: ''
+  stamp: Peer‑reviewed · The Lancet
+  links:
+  - label: PubMed record
+    url: https://pubmed.ncbi.nlm.nih.gov/39904652/
+  - label: ecancer (non‑profit)
+    url: https://ecancer.org/en/news/27721-ai-supported-mammography-screening-results-in-fewer-aggressive-and-advanced-breast-cancers-finds-full-results-from-first-randomised-controlled-trial
+  trace:
+    title: AI as the first reader of mammograms
+    area: Health
+    summary: AI scores every screening mammogram for risk, so radiologists spend their double‑checking where it matters most.
+    facts:
+    - label: The problem
+      text: Standard screening has two radiologists read every mammogram. That is slow, and some cancers still surface between screenings.
+    - label: AI used
+      text: Transpara, a system trained on more than 200,000 exams from over ten countries.
+    - label: What goes in
+      text: Routine screening mammograms.
+    - label: What comes out
+      text: A cancer‑risk score from 1 to 10 for each exam, plus marks on suspicious areas.
+    - label: Who checks it
+      text: Radiologists read every exam and decide every recall.
+    - label: How we know
+      text: 'The MASAI randomised trial: over 105,000 women at four sites in south‑west Sweden.'
+    steps:
+    - role: person
+      text: A woman attends routine screening in Sweden's national programme.
+    - role: ai
+      text: The AI gives her exam a risk score from 1 to 10 and marks any suspicious spots.
+    - role: expert
+      text: Exams scored 1 to 9 get one radiologist. Exams scored 10, the highest risk, get two.
+    - role: expert
+      text: Radiologists decide whether she needs further tests.
+    - role: outcome
+      text: 29% more cancers found, mostly small and early. 12% fewer cancers found between screenings. Reading workload down 44%.
+    worked: AI sorted the queue instead of making the call, so human attention went to the highest‑risk exams.
+    limits: One country's programme. Results elsewhere depend on local screening practice.
+    sources:
+    - label: PubMed record (Lancet Digital Health)
+      url: https://pubmed.ncbi.nlm.nih.gov/39904652/
+    - label: ecancer (full Lancet results)
+      url: https://ecancer.org/en/news/27721-ai-supported-mammography-screening-results-in-fewer-aggressive-and-advanced-breast-cancers-finds-full-results-from-first-randomised-controlled-trial
+    clinical: true
+    tools:
+    - label: Practice data
+      text: CBIS‑DDSM, VinDr‑Mammo and the RSNA screening mammography dataset
+    - label: Models
+      text: PyTorch with timm image models (EfficientNet, ConvNeXt), or MONAI
+    - label: Marking areas
+      text: pytorch‑grad‑cam to show where the model is looking
+    - label: Triage
+      text: A threshold rule in Python that sends the highest scores to double reading
+- id: c06
+  category:
+  - ability
+  place: USA
+  figure: '0'
+  figure_note: people needed to tell her what she was wearing
+  headline: A blind woman gained everyday independence
+  who: Chrichelle Brown, Washington, D.C., legally blind since birth
+  paragraphs:
+  - Using camera glasses linked to a free assistance app, Chrichelle asks an AI to read text, identify objects and describe what's around her. Without them she saw a reporter as a shadow; with them she could check her own outfit. She now teaches other blind people to use the glasses at Columbia Lighthouse for the Blind, and tells students the tool adds to the skills from their other classes rather than replacing them.
+  quote: ''
+  care: ''
+  stamp: News
+  links:
+  - label: NBC Washington
+    url: https://www.nbcboston.com/news/national-international/hey-meta-whats-in-front-of-me-how-ai-glasses-are-changing-a-blind-dc-womans-life/3832717/
+  trace:
+    title: Glasses that describe the world aloud
+    area: Disability
+    summary: A camera in Chrichelle Brown's glasses lets an AI read and describe her surroundings when she asks.
+    facts:
+    - label: The problem
+      text: Everyday tasks like reading a sign or checking an outfit meant asking someone for help.
+    - label: AI used
+      text: A multimodal AI assistant built into camera glasses, connected to the free Be My Eyes app.
+    - label: What goes in
+      text: The live camera view and her spoken question.
+    - label: What comes out
+      text: A spoken description, through speakers in the glasses' frame.
+    - label: Who checks it
+      text: Chrichelle herself, using her training. A sighted volunteer is available through Be My Eyes.
+    - label: Hands free?
+      text: Yes. She uses voice commands, not a phone screen.
+    steps:
+    - role: person
+      text: 'She asks aloud, for example: “What''s in front of me?”'
+    - role: ai
+      text: The camera captures the scene, and the AI identifies objects, reads text and describes the surroundings.
+    - role: ai
+      text: The answer is spoken back through the glasses.
+    - role: person
+      text: If she's unsure, she can call a sighted volunteer through Be My Eyes.
+    - role: outcome
+      text: She can check how she looks and read signs on her own, and now teaches others at Columbia Lighthouse for the Blind.
+    worked: A voice‑first, hands‑free design fits how blind people already move through the world.
+    limits: The AI can misdescribe things. She teaches students to use it alongside their other skills, never instead of them.
+    sources:
+    - label: NBC Washington
+      url: https://www.nbcboston.com/news/national-international/hey-meta-whats-in-front-of-me-how-ai-glasses-are-changing-a-blind-dc-womans-life/3832717/
+    clinical: false
+    tools:
+    - label: Seeing
+      text: 'Vision‑language models: GPT‑4o, Gemini or Claude, or LLaVA, Moondream and Qwen‑VL run locally with Ollama'
+    - label: Listening and speaking
+      text: Whisper for speech‑to‑text; Piper or eSpeak for text‑to‑speech
+    - label: Reading text
+      text: Tesseract OCR as an offline fallback
+    - label: Hardware
+      text: A phone, or a Raspberry Pi 5 with a camera module and earpiece
+- id: c07
+  category:
+  - learning
+  place: Nigeria
+  figure: 6 wks
+  figure_note: of tutoring ≈ 1.5–2 years of normal schooling
+  headline: Teenagers in Benin City leapt ahead in English
+  who: Secondary students at nine public schools, Edo State
+  paragraphs:
+  - Students used a free AI chatbot as an English tutor in twelve 90‑minute after‑school sessions, with teachers guiding them. In a randomised evaluation they beat the comparison group in English, digital skills and AI knowledge, and also did better in end‑of‑term school exams. Each extra session attended added to the gains, and girls who started behind caught up the most. The authors estimate a 14% lift in future wages.
+  quote: ''
+  care: ''
+  stamp: International development body
+  links:
+  - label: World Bank working paper
+    url: https://openknowledge.worldbank.org/bitstreams/cd9cca5b-2ffd-4be1-8313-0f4d2ed6ef4f/download
+  - label: BusinessDay Nigeria
+    url: https://businessday.ng/pro/article/ai-seen-reducing-students-two-year-work-to-six-weeks/
+  trace:
+    title: An after‑school AI tutor, guided by teachers
+    area: Learning
+    summary: Secondary students in Benin City used a free chatbot as an English tutor, with teachers running every session.
+    facts:
+    - label: The problem
+      text: Large classes and limited one‑to‑one help. About 70% of 10‑year‑olds in low‑ and middle‑income countries can't read a simple text.
+    - label: AI used
+      text: Microsoft Copilot, a free chatbot built on GPT‑4.
+    - label: What goes in
+      text: Students' questions and writing, on topics teachers set from the English curriculum.
+    - label: What comes out
+      text: Explanations, feedback on writing, and practice exercises.
+    - label: Who checks it
+      text: Teachers guided every session and kept students on task.
+    - label: How we know
+      text: A randomised evaluation by the World Bank across nine public schools.
+    steps:
+    - role: expert
+      text: Teachers are trained to run the sessions and plan topics that match the term's English curriculum.
+    - role: person
+      text: Students attend twelve 90‑minute after‑school sessions over six weeks.
+    - role: ai
+      text: Students ask the chatbot to explain grammar, give feedback on their writing and quiz them.
+    - role: expert
+      text: Teachers guide how students ask questions, check the AI's answers, and keep the work on the curriculum.
+    - role: outcome
+      text: Gains equal to 1.5 to 2 years of normal schooling, better end‑of‑term exams, and girls who started behind gained the most.
+    worked: The AI added to the teaching rather than replacing it. Every extra session attended added to the gains.
+    limits: A six‑week pilot in one city. Flooding and teacher strikes cut attendance for some students.
+    sources:
+    - label: World Bank working paper
+      url: https://openknowledge.worldbank.org/bitstreams/cd9cca5b-2ffd-4be1-8313-0f4d2ed6ef4f/download
+    - label: BusinessDay Nigeria
+      url: https://businessday.ng/pro/article/ai-seen-reducing-students-two-year-work-to-six-weeks/
+    clinical: false
+    tools:
+    - label: Tutor
+      text: Open WebUI with Ollama on a school server, or any hosted chat model
+    - label: Teaching style
+      text: A system prompt that asks questions back instead of giving answers
+    - label: Curriculum
+      text: Retrieval over the syllabus with LlamaIndex and Chroma
+    - label: Low connectivity
+      text: Kolibri (Learning Equality) for offline content
+- id: c08
+  category:
+  - work
+  place: USA
+  figure: +34%
+  figure_note: issues resolved per hour by the newest, least‑skilled agents
+  headline: New call‑centre workers got good, fast
+  who: 5,172 customer‑support agents at a large US software firm
+  paragraphs:
+  - Economists from Stanford and MIT tracked agents as an AI assistant was rolled out to them in stages. Productivity rose about 14–15% on average, but the biggest gains went to beginners, who learned in weeks what used to take months. International agents' English improved, customers were more polite, and fewer asked for a manager. Staff were also more likely to stay. Top performers saw little benefit.
+  quote: ''
+  care: ''
+  stamp: Peer‑reviewed · QJE
+  links:
+  - label: NBER
+    url: https://www.nber.org/papers/w31161
+  trace:
+    title: A coach that whispers best practice
+    area: Work
+    summary: Support agents got live reply suggestions drawn from how the best agents handled similar problems.
+    facts:
+    - label: The problem
+      text: New agents take months to learn what experienced colleagues know about difficult cases.
+    - label: AI used
+      text: A GPT‑based assistant trained on past support chats, learning most from the highest‑performing agents.
+    - label: What goes in
+      text: The live customer conversation.
+    - label: What comes out
+      text: Suggested replies and links to technical documentation, shown to the agent as the chat happens.
+    - label: Who checks it
+      text: The agent decides whether to use, change or ignore each suggestion.
+    - label: How we know
+      text: 'The tool was rolled out in stages, so economists could compare agents with and without it: 5,172 agents in all.'
+    steps:
+    - role: ai
+      text: The assistant learns from a large set of past conversations, especially the top performers'.
+    - role: person
+      text: A customer writes in with a problem.
+    - role: ai
+      text: The assistant reads the conversation in real time and suggests what to say next.
+    - role: person
+      text: The agent chooses whether to send it as written, edit it or ignore it.
+    - role: outcome
+      text: About 14–15% more issues resolved per hour on average, and 34% for the newest agents. Customers were politer, and staff stayed longer.
+    worked: It passed experienced agents' know‑how on to newer agents, and the agent stayed in charge of every reply.
+    limits: The most experienced agents gained little and saw small drops in quality.
+    sources:
+    - label: NBER working paper
+      url: https://www.nber.org/papers/w31161
+    clinical: false
+    tools:
+    - label: Retrieval
+      text: LlamaIndex or LangChain with Chroma, Qdrant or pgvector
+    - label: Embeddings
+      text: sentence‑transformers models
+    - label: Helpdesk
+      text: Chatwoot or Zammad, open‑source support desks you can add suggestions to
+    - label: Practice data
+      text: Public customer‑support datasets on Kaggle and Hugging Face
+- id: c09
+  category:
+  - work
+  place: Kenya & India
+  figure: 1:1000
+  figure_note: extension officers to farmers in Kenya; the gap AI is filling
+  headline: Small farmers got an agronomist in their pocket
+  who: Sammy Selim, coffee farmer in Kericho, Kenya · Akula Sarswati, 38, two‑acre farmer in India
+  paragraphs:
+  - Sammy walks his slopes sending farm coordinates to a WhatsApp chatbot, which replies with a target yield and the exact fertiliser mix to reach it. Akula used a non‑profit chatbot, FarmerChat, to plan intercropping on her plot; over 225,000 farmers across India, Ethiopia, Kenya and Nigeria now use it. A survey of over 800 smallholders on similar tools found high satisfaction.
+  quote: ''
+  care: farmers like these tools, but proof of higher yields is still being gathered. Randomised trials in Kenya are running through January 2027.
+  stamp: News · Non‑profit
+  links:
+  - label: The Guardian, via NextBillion
+    url: https://nextbillion.net/news/high-tech-high-yields-the-kenyan-farmers-deploying-ai-to-increase-productivity
+  - label: ISDM case study
+    url: https://www.isdm.org.in/ekam/development-management-hub/ask-and-they-receive
+  - label: J‑PAL trial
+    url: https://www.povertyactionlab.org/initiative-project/llm-powered-digital-advisory-services-agripreneurs-and-smallholders
+  trace:
+    title: An agronomist in a chat app
+    area: Work
+    summary: Smallholder farmers ask questions in their own language and get advice for their own plot.
+    facts:
+    - label: The problem
+      text: One extension officer per 1,000 farmers in Kenya and about 750 in India, so most farmers never get expert advice.
+    - label: AI used
+      text: Chatbots on WhatsApp, phone lines and apps that combine a language model with checked farming guides and local data.
+    - label: What goes in
+      text: A spoken or typed question in the farmer's language, or the farm's location.
+    - label: What comes out
+      text: 'Specific advice: fertiliser amounts, intercropping plans, pest control and market prices.'
+    - label: Who checks it
+      text: The guides are vetted by agricultural experts, and in many programmes extension workers use the same tool.
+    - label: Reach
+      text: FarmerChat alone has over 225,000 users in India, Ethiopia, Kenya and Nigeria.
+    steps:
+    - role: person
+      text: A farmer like Sammy Selim sends his farm's coordinates, or asks a question by voice or text.
+    - role: ai
+      text: Speech recognition and translation turn the question into text the model can work with.
+    - role: ai
+      text: The model answers from vetted agricultural guides plus local weather, soil and market data.
+    - role: ai
+      text: The reply is translated back and read aloud if needed. Sammy gets a target yield and the fertiliser mix to reach it.
+    - role: person
+      text: The farmer applies the advice. Extension workers use the same tool to reach more farmers.
+    - role: outcome
+      text: High satisfaction in a survey of over 800 farmers. Yield trials in Kenya run until January 2027.
+    worked: It works on phones farmers already have, in their own language, including by voice for those who can't read.
+    limits: Women farmers are less likely to own smartphones, and proof of higher yields is still being gathered.
+    sources:
+    - label: The Guardian, via NextBillion
+      url: https://nextbillion.net/news/high-tech-high-yields-the-kenyan-farmers-deploying-ai-to-increase-productivity
+    - label: ISDM case study
+      url: https://www.isdm.org.in/ekam/development-management-hub/ask-and-they-receive
+    - label: AIEP farmer study
+      url: https://arxiv.org/pdf/2601.11537
+    - label: J‑PAL trial
+      url: https://www.povertyactionlab.org/initiative-project/llm-powered-digital-advisory-services-agripreneurs-and-smallholders
+    clinical: false
+    tools:
+    - label: Phone line
+      text: WhatsApp Business Cloud API, or Twilio for voice calls
+    - label: Languages
+      text: Whisper; AI4Bharat IndicConformer and IndicTrans2; India's Bhashini APIs
+    - label: Answers
+      text: An LLM with retrieval over FAO and national extension guides
+    - label: Local data
+      text: Open‑Meteo for weather, ISRIC SoilGrids for soil, Agmarknet for Indian market prices
+- id: c10
+  category:
+  - rights
+  - health
+  place: USA
+  figure: <1%
+  figure_note: of health‑coverage denials were ever appealed (KFF)
+  headline: Patients started fighting back against insurance denials
+  who: Patients using free AI tools, including one built by the non‑profit Counterforce Health
+  paragraphs:
+  - Appeal letters are formal, technical and exhausting to write, which is why almost nobody files them. Patients are now using general chatbots, and a free AI assistant from a North Carolina non‑profit, to draft appeals and challenge large medical bills. Several states have meanwhile barred insurers from letting AI alone decide to deny care.
+  quote: ''
+  care: patient advocates warn that people who aren't medical experts may not notice when an AI gets a medical fact wrong, which can sink an appeal.
+  stamp: Non‑profit news · Stateline
+  links:
+  - label: Stateline, via Wisconsin Examiner
+    url: https://wisconsinexaminer.com/2025/11/24/repub/ai-vs-ai-patients-deploy-bots-to-battle-health-insurers-that-deny-care/
+  trace:
+    title: Help drafting an insurance appeal
+    area: Paperwork
+    summary: Patients use AI to turn a denial letter and their records into a formal appeal they would otherwise never write.
+    facts:
+    - label: The problem
+      text: Appeals are technical and exhausting. Fewer than 1% of health‑coverage denials are ever appealed.
+    - label: AI used
+      text: A free AI appeal assistant from the non‑profit Counterforce Health, and general chatbots.
+    - label: What goes in
+      text: Usually the denial letter, the insurance plan's terms and the relevant medical records.
+    - label: What comes out
+      text: A draft appeal letter that answers the insurer's stated reason.
+    - label: Who checks it
+      text: The patient, ideally with their doctor, before it is sent.
+    - label: Note
+      text: These steps describe how such tools generally work. Each tool differs.
+    steps:
+    - role: person
+      text: A patient receives a denial and gathers the letter, the plan documents and their records.
+    - role: ai
+      text: The AI picks out the reason for the denial and the parts of the plan that apply.
+    - role: ai
+      text: It drafts an appeal that argues medical necessity and cites the records and plan terms.
+    - role: expert
+      text: The patient and their doctor check every medical fact before sending.
+    - role: outcome
+      text: Appeals get filed by people who would have given up. Some states have also barred insurers from letting AI alone deny care.
+    worked: It takes the effort out of the process, which is what usually stops people appealing.
+    limits: People without medical training may miss a factual error that sinks the appeal.
+    sources:
+    - label: Stateline, via Wisconsin Examiner
+      url: https://wisconsinexaminer.com/2025/11/24/repub/ai-vs-ai-patients-deploy-bots-to-battle-health-insurers-that-deny-care/
+    clinical: false
+    tools:
+    - label: Reading letters
+      text: PyMuPDF and Tesseract OCR
+    - label: Extraction
+      text: An LLM with structured (JSON) output to pull out the denial reason and plan terms
+    - label: Drafting
+      text: python‑docx to fill an appeal letter template
+    - label: Guidance
+      text: Appeal guides from state insurance departments and patient‑advocacy non‑profits

@@ -1,0 +1,73 @@
+---
+nav: home
+description: A monthly record of documented cases where AI made a real difference to ordinary people.
+---
+{% assign latest = site.data.issues[0] %}
+{% assign prev = site.data.issues[1] %}
+{% assign latest_cases = site.data.cases[latest.slug] %}
+{% capture latest_dir %}/issues/{{ latest.slug }}/{% endcapture %}
+<section class="home-hero">
+  <div class="copy">
+    <div class="eyebrow">{{ site.title }} · Issue No. {{ latest.number }} out now</div>
+    <h1>How ordinary people <em>actually</em> benefited from AI</h1>
+    <p class="lede">{{ site.title }} is a monthly record of documented cases where AI made a real difference to a patient, a parent, a student, a farmer or a worker. Each case says what happened, how it was done, and where the evidence comes from.</p>
+    <div class="btns">
+      <a class="btn primary" href="{{ latest_dir | append: 'cases.html' | relative_url }}">Read the latest issue</a>
+      <a class="btn ghost" href="{{ latest_dir | append: 'how-it-works.html' | relative_url }}">See how it works</a>
+    </div>
+  </div>
+  <div class="hero-art">{% include illustrations/hero.svg %}</div>
+</section>
+
+<section class="release" aria-label="Releases">
+  <div class="rel-card latest">
+    <span class="rel-tag"><b>Latest release</b> Issue No. {{ latest.number }} · {{ latest.month }}</span>
+    <h2>{{ latest.title }}</h2>
+    <p>{{ latest.summary }} {{ latest.compiled }}.</p>
+    <ol class="rel-list">{% for c in latest_cases %}<li><a href="{{ latest_dir | append: 'cases.html#' | append: c.id | relative_url }}"><span>{{ c.headline }}</span></a></li>{% endfor %}</ol>
+    <div class="btns">
+      <a class="btn primary" href="{{ latest_dir | append: 'cases.html' | relative_url }}">All {{ latest_cases.size }} cases</a>
+      <a class="btn ghost" href="{{ latest_dir | append: 'how-it-works.html' | relative_url }}">How they were done</a>
+    </div>
+  </div>
+  {% if prev %}{% capture prev_dir %}/issues/{{ prev.slug }}/{% endcapture %}
+  <div class="rel-card prev">
+    <span class="rel-tag">Previous · No. {{ prev.number }} · {{ prev.month }}</span>
+    <h2>{{ prev.title }}</h2>
+    <p>{{ prev.summary }}</p>
+    <ol class="rel-list">{% for c in site.data.cases[prev.slug] %}<li><a href="{{ prev_dir | append: 'cases.html#' | append: c.id | relative_url }}"><span>{{ c.headline }}</span></a></li>{% endfor %}</ol>
+    <div class="btns">
+      <a class="btn ghost" href="{{ prev_dir | append: 'cases.html' | relative_url }}">Read issue</a>
+      <a class="btn ghost" href="{{ '/archive.html' | relative_url }}">Archive</a>
+    </div>
+  </div>{% endif %}
+</section>
+
+<section class="home-sec">
+  <h2 class="section-title">Outcomes from the latest issue</h2>
+  <div class="outcomes">{% for c in latest_cases %}
+    <a class="outcome" href="{{ latest_dir | append: 'cases.html#' | append: c.id | relative_url }}"><span class="figure">{{ c.figure }}</span><span class="who-short">{{ c.headline }}</span><span class="figure-note">{{ c.figure_note }}</span></a>{% endfor %}
+  </div>
+</section>
+
+<section class="home-sec">
+  <h2 class="section-title">What you’ll find</h2>
+  <div class="areas">{% for cat in site.data.categories %}{% if cat.home %}
+    {% assign n = 0 %}{% for i in site.data.issues %}{% for c in site.data.cases[i.slug] %}{% if c.category contains cat.key %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% endfor %}
+    <div class="area">
+      <div class="spot">{% case cat.key %}{% when 'health' %}{% include illustrations/spot-health.svg %}{% when 'ability' %}{% include illustrations/spot-ability.svg %}{% when 'learning' %}{% include illustrations/spot-learning.svg %}{% when 'work' %}{% include illustrations/spot-work.svg %}{% endcase %}</div>
+      <span class="count">{{ n }} cases across all issues</span>
+      <h3>{{ cat.area_title }}</h3>
+      <p>{{ cat.area_text }}</p>
+    </div>{% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="home-sec">
+  <h2 class="section-title">About this site</h2>
+  <div class="context">
+    <div><h3>Why it exists</h3><p>Coverage of AI swings between sales pitches and alarm. {{ site.title }} tracks the quieter evidence: specific people, specific outcomes, with the caveats left in.</p></div>
+    <div><h3>How an issue is made</h3><p>Each month we collect cases from news reports, journals, universities, public health services and non‑profits. Vendor case studies, consultancy reports and LinkedIn posts are excluded.</p></div>
+    <div><h3>How to use it</h3><p>Read the cases for the human story. Open <em>How it works</em> to see each step, who checked the AI, and which open tools you could use to build a similar prototype.</p></div>
+  </div>
+</section>

@@ -1,0 +1,360 @@
+# Issue No. 01 · September 2026 · Reported in September
+- id: c01
+  category:
+  - health
+  place: USA
+  figure: 3 days
+  figure_note: of school missed since treatment began. Before, she was well about 7 days a year
+  headline: Two parents chased down their daughter's rare diagnosis
+  who: Hilary and Matt Eaton and their daughter Olivia, 5
+  paragraphs:
+  - Olivia had developmental delays, wounds that healed badly, very low antibody levels and near‑constant infections. Her parents, both biotech scientists, gave ChatGPT her lab results and asked for possible diagnoses. Its first answer was wrong, but it pointed them at her immune system, and they kept using it to list genes linked to her symptoms. Specialists at Boston Children's Hospital confirmed Okur‑Chung neurodevelopmental syndrome, which affects about 1 in 100,000 people, and started her on treatment.
+  quote: “She's missed three days of school. That's it.”
+  care: The family had scientific training most parents don't, and the AI's first suggestion was wrong. The diagnosis came from specialists.
+  stamp: News
+  links:
+  - label: The Boston Globe, 12 Sep 2026
+    url: https://www.bostonglobe.com/2026/09/12/metro/ai-chatgpt-health-rare-disease/
+  trace:
+    title: Parents use a chatbot to focus the search
+    area: Health
+    summary: Two scientist parents used a chatbot to work through their daughter's lab results, then took the leads to the specialists who made the diagnosis.
+    facts:
+    - label: The problem
+      text: A 5‑year‑old with developmental delays, poor wound healing, low antibodies and infections most days of the year.
+    - label: AI used
+      text: ChatGPT, a general‑purpose chatbot.
+    - label: What goes in
+      text: Lab results and symptoms, with the question “With the following test results, what are possible diagnoses?”
+    - label: What comes out
+      text: Possible diagnoses, and later the genes linked to her connective‑tissue and immune problems.
+    - label: Who checks it
+      text: Specialists at Boston Children's Hospital, including Dr. Wendy Chung, who co‑discovered the syndrome.
+    - label: Diagnosis
+      text: Okur‑Chung neurodevelopmental syndrome, about 1 in 100,000 people.
+    steps:
+    - role: person
+      text: Hilary and Matt Eaton gather Olivia's lab results and describe her symptoms.
+    - role: ai
+      text: The chatbot first suggests common variable immunodeficiency. That's wrong, but it points them at her immune system.
+    - role: person
+      text: They keep asking, and use it to list genes linked to her connective‑tissue and immune problems.
+    - role: expert
+      text: Boston Children's specialists confirm the syndrome and start monthly antibody infusions and anti‑seizure medication.
+    - role: outcome
+      text: She sleeps through the night, has far fewer infections, and has missed only three days of school.
+    worked: The parents used AI to ask better questions and arrived at specialists with focused leads.
+    limits: Its first answer was wrong, and the family had expertise most parents don't.
+    sources:
+    - label: The Boston Globe
+      url: https://www.bostonglobe.com/2026/09/12/metro/ai-chatgpt-health-rare-disease/
+    clinical: true
+    tools:
+    - label: Models
+      text: Claude, GPT‑4o or Gemini (hosted), or Llama and Mistral run locally with Ollama
+    - label: Medical knowledge
+      text: Human Phenotype Ontology (HPO) for symptoms, ClinVar and OMIM for genes
+    - label: Genetics tools
+      text: Exomiser or LIRICAL, open‑source tools that rank genetic variants against symptoms
+    - label: Interface
+      text: Streamlit or Gradio for a simple upload‑and‑ask web app
+- id: c02
+  category:
+  - health
+  - ability
+  place: USA
+  figure: '0'
+  figure_note: errors in the first sentence she chose to say freely
+  headline: A woman losing her speech phoned her grandchildren
+  who: A woman in her 60s from Michigan with motor neuron disease
+  paragraphs:
+  - In June 2026, surgeons at University of Michigan Health implanted a fully wireless device with 421 micro‑wires that read individual neurons in her motor cortex. Software turns the signals into on‑screen text and a synthesized voice in real time. Her first freely chosen sentence was “Okay, I have a lot to say,” decoded without errors, and she has since used it to call her grandchildren.
+  quote: ''
+  care: These are early, company‑reported results from one participant in an FDA‑approved feasibility study. They have not been peer reviewed, and long‑term safety is unproven.
+  stamp: News
+  links:
+  - label: Medical Daily, 17 Sep 2026
+    url: https://www.medicaldaily.com/paradromics-brain-implant-real-time-speech-478794
+  - label: CBS Austin, 14 Sep 2026
+    url: https://cbsaustin.com/news/local/i-have-a-lot-to-say-austin-brain-implant-helps-patient-communicate-in-real-time
+  trace:
+    title: A wireless implant that speaks for her
+    area: Disability
+    summary: A fully implanted device reads individual neurons and sends their activity wirelessly to software that speaks her words aloud.
+    facts:
+    - label: The problem
+      text: Progressive motor neuron disease was taking away her speech.
+    - label: AI used
+      text: Decoding software that learns to map patterns of neural activity onto words.
+    - label: What goes in
+      text: Signals from 421 micro‑wires in the motor cortex, sent wirelessly from a fully implanted device.
+    - label: What comes out
+      text: On‑screen text and synthesized speech in real time.
+    - label: Who checks it
+      text: The Connect‑One early feasibility study at University of Michigan Health, approved by the FDA in November 2025.
+    - label: Status
+      text: One participant, early company‑reported results, not yet peer reviewed.
+    steps:
+    - role: expert
+      text: 'June 2026: surgeons at University of Michigan Health implant the device in a four‑hour operation.'
+    - role: person
+      text: She tries to speak, either moving her mouth or only imagining the words.
+    - role: ai
+      text: The implant records individual neurons and transmits the activity wirelessly to an external computer.
+    - role: ai
+      text: Decoding software turns the patterns into words, shows them as text and speaks them in a synthesized voice.
+    - role: outcome
+      text: Her first free sentence, “Okay, I have a lot to say,” was decoded without errors. She has phoned her grandchildren with it.
+    worked: Because the device is fully implanted and wireless, nothing passes through the skin, which suits everyday home use.
+    limits: One person, results reported by the company, and long‑term safety and accuracy are unknown. A six‑year follow‑up is planned.
+    sources:
+    - label: Medical Daily
+      url: https://www.medicaldaily.com/paradromics-brain-implant-real-time-speech-478794
+    - label: CBS Austin
+      url: https://cbsaustin.com/news/local/i-have-a-lot-to-say-austin-brain-implant-helps-patient-communicate-in-real-time
+    clinical: true
+    tools:
+    - label: Practice data
+      text: Public intracortical speech datasets released by the BrainGate team (Brain‑to‑Text benchmarks)
+    - label: Decoding
+      text: PyTorch recurrent networks with CTC decoding (torchaudio or pyctcdecode)
+    - label: Streaming
+      text: Lab Streaming Layer (LSL) to simulate a live wireless signal
+    - label: Voice
+      text: Piper or Coqui XTTS for text‑to‑speech
+- id: c03
+  category:
+  - work
+  place: India
+  figure: ₹150
+  figure_note: a vet visit Gayatriben no longer needed for her buffalo
+  headline: Dairy farmers got a vet's advice in Gujarati
+  who: Gayatriben, Charmiben and Meenaben in Gujarat, and Dipali Kalbhor, a beekeeper in Maharashtra
+  paragraphs:
+  - Gujarat's dairy co‑operative runs a voice assistant called Sarlaben that answers in Gujarati. It recognises farmers by their phone number and draws on the co‑op's records for each animal. It told Gayatriben how to treat her buffalo, gave Charmiben a feeding plan for a cow that wasn't growing, and recognised that Meenaben's cow was in a dangerous birth, then connected her to a specialist in time to save it. In Maharashtra, Dipali Kalbhor checks the state's MahaVISTAAR platform two or three times a day, and its fertiliser calculator cut her fertiliser use by about 15%.
+  quote: ''
+  care: These are farmers' own accounts. No published evaluation of the outcomes exists yet.
+  stamp: News
+  links:
+  - label: The Better India, 25 Sep 2026
+    url: https://thebetterindia.com/farming/ai-for-farmers-india-sarlaben-mahavistaar-local-language-cattle-crops-12574226/amp
+  trace:
+    title: A voice assistant that knows each cow
+    area: Work
+    summary: Dairy farmers ask in Gujarati by voice, and the assistant answers using the co‑operative's records for their own animals.
+    facts:
+    - label: The problem
+      text: A vet visit costs ₹150 and has to be arranged through the co‑operative.
+    - label: AI used
+      text: Sarlaben, the dairy co‑operative's voice assistant, and MahaVISTAAR, Maharashtra's farm advisory platform.
+    - label: What goes in
+      text: A spoken question in Gujarati or Marathi, the farmer's phone number, and the animal's name or ID.
+    - label: What comes out
+      text: Personal advice on animal health, feeding, breeding, vaccination and government schemes.
+    - label: Who checks it
+      text: Specialists step in for serious cases. The assistant connected Meenaben to one.
+    - label: Language
+      text: Local languages, by voice, so farmers don't need to read or type.
+    steps:
+    - role: person
+      text: Gayatriben's buffalo keeps banging its head against a tree, so she asks Sarlaben by voice.
+    - role: ai
+      text: The assistant recognises her phone number and looks up her animals in the co‑op's cattle records.
+    - role: ai
+      text: It suggests cleaning the area with oil and applying turmeric. The problem clears up.
+    - role: expert
+      text: When Meenaben's cow has a difficult birth, the assistant recognises how serious it is and connects her to a specialist.
+    - role: outcome
+      text: Meenaben's cow survives. In Maharashtra, Dipali Kalbhor's fertiliser use falls by about 15%.
+    worked: Linking the assistant to records farmers already have makes the advice specific to their animal, not generic.
+    limits: These are farmers' accounts. There is no published evaluation yet, and serious cases still need a vet.
+    sources:
+    - label: The Better India
+      url: https://thebetterindia.com/farming/ai-for-farmers-india-sarlaben-mahavistaar-local-language-cattle-crops-12574226/amp
+    clinical: false
+    tools:
+    - label: Phone line
+      text: WhatsApp Business Cloud API, or Twilio and Exotel for voice calls
+    - label: Indian languages
+      text: AI4Bharat speech and translation models (IndicConformer, IndicTrans2) or the government's Bhashini APIs
+    - label: Answers
+      text: An LLM with retrieval over veterinary and extension guides, using LlamaIndex and Chroma
+    - label: Farmer records
+      text: PostgreSQL, looked up by caller phone number
+- id: c04
+  category:
+  - health
+  place: USA
+  figure: −17%
+  figure_note: relative drop in sepsis deaths after the alert system started
+  headline: An early warning gave sepsis patients a better chance
+  who: 6,217 adults treated for sepsis in two UC San Diego Health emergency departments
+  paragraphs:
+  - Sepsis can turn deadly within hours, and its early signs are easy to miss. A deep‑learning model called COMPOSER watches more than 150 measurements for each patient, including vital signs, lab results, medications and medical history, and alerts a nurse when it sees the pattern of sepsis. The nurse checks the patient and a doctor decides on treatment. After it was introduced, antibiotics were given faster and sepsis deaths fell by 17% in relative terms, or 1.9 percentage points.
+  quote: ''
+  care: This was a before‑and‑after study in one health system, not a randomised trial, so it can't prove the AI caused the drop.
+  stamp: News · Peer‑reviewed study
+  links:
+  - label: Ya Libnan, 29 Sep 2026 (reporting npj Digital Medicine)
+    url: https://yalibnan.com/2026/09/29/when-every-minute-matters-how-ai-is-helping-doctors-save-sepsis-patients/
+  trace:
+    title: An early‑warning alert for sepsis
+    area: Health
+    summary: A model watches each emergency patient's data and alerts a nurse when it sees the early pattern of sepsis.
+    facts:
+    - label: The problem
+      text: Sepsis can become deadly within hours, and its early signs are easy to miss in a busy emergency department.
+    - label: AI used
+      text: COMPOSER, a deep‑learning model developed at UC San Diego Health.
+    - label: What goes in
+      text: 'More than 150 measurements: vital signs, lab results, medications and medical history.'
+    - label: What comes out
+      text: An alert sent to the patient's nurse.
+    - label: Who checks it
+      text: A nurse reviews the patient, and a doctor decides what care is needed.
+    - label: How we know
+      text: A before‑and‑after study of 6,217 adults with sepsis, published in npj Digital Medicine.
+    steps:
+    - role: person
+      text: A patient arrives at one of two UC San Diego Health emergency departments.
+    - role: ai
+      text: The model keeps checking more than 150 measurements from the patient's record.
+    - role: ai
+      text: When the pattern suggests sepsis, it sends an alert to the nurse.
+    - role: expert
+      text: The nurse examines the patient and raises it with a doctor, who decides on treatment, usually antibiotics given sooner.
+    - role: outcome
+      text: Sepsis deaths fell by 17% in relative terms, or 1.9 percentage points, and recommended care was followed more often.
+    worked: The alert goes to the nurse who is already with the patient, so it fits the existing routine instead of adding a new step.
+    limits: A before‑and‑after study in one health system can't prove the AI caused the drop. Wider testing is needed.
+    sources:
+    - label: Ya Libnan
+      url: https://yalibnan.com/2026/09/29/when-every-minute-matters-how-ai-is-helping-doctors-save-sepsis-patients/
+    clinical: true
+    tools:
+    - label: Practice data
+      text: MIMIC‑IV and the PhysioNet/CinC 2019 sepsis challenge data (credentialed access)
+    - label: Models
+      text: XGBoost or LightGBM for tabular risk scores; PyTorch for time‑series models
+    - label: Hospital data
+      text: HAPI FHIR to simulate a hospital record feed
+    - label: Alerts
+      text: A small dashboard in Streamlit or Grafana with nurse acknowledgement
+- id: c05
+  category:
+  - learning
+  place: El Salvador
+  figure: '171'
+  figure_note: pilot schools whose tested students beat national averages
+  headline: Public school students in El Salvador caught up with Europe
+  who: 1,198 volunteer students tested across 171 pilot schools
+  paragraphs:
+  - For just over a year, pilot schools combined structured teaching, teacher coaching, catch‑up programmes, better facilities and AI tutors. The students tested scored above El Salvador's national averages in reading, maths and science, at a level comparable to Germany and Sweden on the 2022 PISA tests. The World Bank called the results “surprising and very encouraging”. The programme is expanding to more than 1,000 schools.
+  quote: ''
+  care: The students and schools volunteered, the AI tutors were one part of a wider reform, and detailed scores haven't been published. The AI's share of the gain can't be separated out.
+  stamp: News · Government & World Bank
+  links:
+  - label: Lynnwood Times, 6 Sep 2026
+    url: https://lynnwoodtimes.com/2026/09/06/pisa/
+  trace:
+    title: AI tutors inside a whole‑school reform
+    area: Learning
+    summary: AI tutors were one part of a national programme that also improved teaching, coaching and school facilities.
+    facts:
+    - label: The problem
+      text: Raising learning across a whole public school system, not just in one classroom.
+    - label: AI used
+      text: AI tutors provided through a government partnership with xAI, announced in December 2025.
+    - label: What goes in
+      text: Students' questions and practice work in class.
+    - label: What comes out
+      text: Tutoring and practice for each student, alongside the teacher's lessons.
+    - label: Who checks it
+      text: Teachers, who also received coaching as part of the programme.
+    - label: How we know
+      text: Results for 1,198 volunteer students in 171 pilot schools, announced by the government and the World Bank.
+    steps:
+    - role: expert
+      text: The government brings in structured teaching, teacher coaching, catch‑up programmes, management tools and better facilities.
+    - role: person
+      text: For just over a year, students in 171 pilot schools use AI tutors as part of their classes.
+    - role: ai
+      text: The tutors give each student practice and explanations at their own pace.
+    - role: expert
+      text: Coached teachers decide what each student needs next.
+    - role: outcome
+      text: Tested students scored above national averages in reading, maths and science, comparable to Germany and Sweden on PISA 2022.
+    worked: The AI came with better teaching, coaching and facilities, not in place of them.
+    limits: The schools volunteered, detailed scores aren't published, and the AI's share of the gain can't be separated out.
+    sources:
+    - label: Lynnwood Times
+      url: https://lynnwoodtimes.com/2026/09/06/pisa/
+    clinical: false
+    tools:
+    - label: Tutor
+      text: Open WebUI with Ollama on a school server, with a Socratic system prompt
+    - label: Curriculum
+      text: Retrieval over the national syllabus and open textbooks with LlamaIndex
+    - label: Low connectivity
+      text: Kolibri (Learning Equality) for offline lessons and practice
+    - label: Teacher view
+      text: Moodle or a simple dashboard showing each student's progress
+- id: c06
+  category:
+  - work
+  place: Senegal
+  figure: 84%
+  figure_note: accuracy mapping crops in the groundnut basin
+  headline: Small farms in Senegal became visible from space
+  who: Smallholder farming areas in Senegal's groundnut basin
+  paragraphs:
+  - Small family plots are hard to map, so they are often missing from the data governments use to plan food security and support. Cambridge researchers built Tessera, an open‑source AI model that reads a full year of satellite images and describes how each 10‑metre square changes through the seasons. With only a little ground data to calibrate it, the model mapped crops with 84% accuracy, up to 28% better than the next best method, and with far less computing power.
+  quote: “It's a step towards greater geospatial data democratisation.” Madeline Lisaius, lead researcher
+  care: Farmers benefit indirectly, through better data for governments and food‑security agencies. The research doesn't yet show changes on the farms themselves.
+  stamp: University
+  links:
+  - label: University of Cambridge, 29 Sep 2026
+    url: https://cam.ac.uk/research/news/ai-tool-for-mapping-smallholder-crops-proves-itself-in-senegal
+  trace:
+    title: Satellite crop maps for small farms
+    area: Work
+    summary: An open‑source model turns a year of satellite images into crop maps detailed enough to show small family plots.
+    facts:
+    - label: The problem
+      text: Small plots are hard to map, and ground surveys are slow and expensive.
+    - label: AI used
+      text: Tessera, an open‑source model from University of Cambridge researchers.
+    - label: What goes in
+      text: A full year of satellite images of the region.
+    - label: What comes out
+      text: Crop maps at 10‑metre detail.
+    - label: Who checks it
+      text: Researchers calibrate the model with a small amount of ground data.
+    - label: Accuracy
+      text: 84% in Senegal's groundnut basin, up to 28% better than the next best method.
+    steps:
+    - role: ai
+      text: The model reads a full year of satellite images and turns each 10‑metre square into numbers that describe its seasonal changes.
+    - role: expert
+      text: Researchers supply a small set of fields where the crop is known on the ground.
+    - role: ai
+      text: A simple algorithm uses those examples to label crops across the whole region.
+    - role: expert
+      text: Governments and food‑security groups can plan with the maps instead of doing costly ground surveys.
+    - role: outcome
+      text: Crops mapped with 84% accuracy, using a fraction of the computing power of other methods.
+    worked: Doing the heavy computation once, in an open model, makes it cheap for anyone to map a new region.
+    limits: The benefit to farmers is indirect, through better data for decision makers. Effects on the farms themselves aren't measured yet.
+    sources:
+    - label: University of Cambridge
+      url: https://cam.ac.uk/research/news/ai-tool-for-mapping-smallholder-crops-proves-itself-in-senegal
+    clinical: false
+    tools:
+    - label: Model
+      text: Tessera itself is open source
+    - label: Satellite data
+      text: Sentinel‑1 and Sentinel‑2 from the Copernicus Data Space, or Google Earth Engine
+    - label: Libraries
+      text: rasterio, xarray and TorchGeo; scikit‑learn for the final classifier
+    - label: Maps
+      text: QGIS to view and share the crop maps

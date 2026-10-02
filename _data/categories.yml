@@ -1,0 +1,26 @@
+# Areas of life used for filters and the home page.
+- key: health
+  label: Health
+  home: true
+  area_title: Health
+  area_text: Faster diagnoses, earlier cancer detection, better odds after a stroke or sepsis.
+- key: ability
+  label: Disability &amp; independence
+  home: true
+  area_title: Independence
+  area_text: Brain implants that restore speech and walking, glasses that read the world aloud.
+- key: learning
+  label: Learning
+  home: true
+  area_title: Learning
+  area_text: Tutors that let students in Nigeria and El Salvador catch up fast.
+- key: work
+  label: Work &amp; livelihood
+  home: true
+  area_title: Livelihoods
+  area_text: Farm advice in local languages, and new workers who get good quickly.
+- key: rights
+  label: Paperwork &amp; rights
+  home: false
+  area_title: Paperwork
+  area_text: Help with appeals, forms and rights.

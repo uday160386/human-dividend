@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+<div class="wrap{% if page.wide %} wide{% endif %}">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</div>
+{% for script in page.scripts %}<script src="{{ script | relative_url }}"></script>
+{% endfor %}</body>
+</html>

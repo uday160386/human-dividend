@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign issue = site.data.issues | where: "slug", page.issue | first %}
+{% assign cases = site.data.cases[page.issue] %}
+{% include issuebar.html %}
+<header class="page-head">
+  <div class="eyebrow">Issue No. {{ issue.number }} · {{ issue.month }}</div>
+  <h1>{{ issue.title }}</h1>
+  <p class="lede">{{ issue.summary }} Each record names the person, what changed for them, and where the account comes from.</p>
+  <div class="ledger"><span>{{ issue.compiled }}</span><span><b>{{ cases.size }}</b> cases</span></div>
+</header>
+<nav class="filters" aria-label="Filter cases by area of life">
+  <span>Area</span>
+  <button class="chip" type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+  {% for cat in site.data.categories %}{% assign found = false %}{% for c in cases %}{% if c.category contains cat.key %}{% assign found = true %}{% endif %}{% endfor %}{% if found %}<button class="chip" type="button" id="f-{{ cat.key }}" data-f="{{ cat.key }}" aria-pressed="false">{{ cat.label }}</button>{% endif %}{% endfor %}
+</nav>
+<main class="cases" id="cases">
+{% for c in cases %}{% include case-record.html %}{% endfor %}
+<p class="empty" id="empty" hidden>No cases in this area.</p>
+</main>

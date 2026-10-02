@@ -1,0 +1,14 @@
+# Newest issue first. The first entry is treated as the latest release.
+# Each issue needs a matching _data/cases/<slug>.yml and two pages in issues/<slug>/.
+- slug: 2026-10
+  number: '02'
+  month: October 2026
+  title: The landmark cases
+  summary: Ten defining cases from 2023 to 2026, from brain implants to farm chatbots.
+  compiled: Compiled 1 October 2026
+- slug: 2026-09
+  number: '01'
+  month: September 2026
+  title: Reported in September
+  summary: Six cases reported during September 2026, from a rare diagnosis in Boston to dairy farmers in Gujarat.
+  compiled: Back issue, compiled 2 October 2026 from stories reported in September 2026

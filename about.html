@@ -1,0 +1,31 @@
+---
+title: About
+nav: about
+---
+<header class="page-head">
+  <div class="eyebrow">Method</div>
+  <h1>About {{ site.title }}</h1>
+  <p class="lede">Most writing about AI comes from the companies selling it, the consultants advising on it, or people worried about it. {{ site.title }} keeps a plain record of something narrower: documented cases where an ordinary person was better off. Every case comes from journalism, peer‑reviewed research, a university, a public body or a non‑profit.</p>
+</header>
+<div class="rules">
+    <div><h2>What counts as a source</h2><p>Journalism (NBC, TODAY, The Guardian, Stateline), journals (NEJM, Nature, The Lancet, QJE), universities, the NHS and UK government, the World Bank, and non‑profits.</p></div>
+    <div><h2>What was left out</h2><p>Vendor case studies, AI‑lab blog posts, consulting reports, and social‑media testimonials, even when they told a good story.</p></div>
+    <div><h2>Who counts as "common people"</h2><p>Patients, parents, students, farmers, frontline workers and people with disabilities. Not executives, not investors.</p></div>
+  </div>
+<section class="caveats">
+    <h2>The fine print</h2>
+    <ul>
+      <li>These are success stories. AI also makes confident mistakes, and the people above did best when a human expert, a teacher or a doctor stayed in the loop.</li>
+      <li>Several of the strongest results come from clinical trials with implants or hospital systems, not from apps anyone can download today.</li>
+      <li>In the call‑centre study, the most experienced workers saw small drops in quality. Gains were real but uneven.</li>
+      <li>Some figures are early analyses or single cases. Where a randomised trial exists (Sweden, Nigeria, the call centres), it is noted.</li>
+    </ul>
+  </section>
+{% for issue in site.data.issues %}
+<section class="sources">
+  <h2>Sources · No. {{ issue.number }}, {{ issue.month }}</h2>
+  <ol class="srclist">{% for c in site.data.cases[issue.slug] %}{% for l in c.links %}
+    <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a> <span>{{ c.stamp | downcase }} · case {{ c.id | remove: 'c' }}</span></li>{% endfor %}{% endfor %}
+  </ol>
+</section>
+{% endfor %}

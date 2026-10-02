@@ -64,3 +64,9 @@ Every case must come from journalism, peer-reviewed research, a university, a pu
 
 - **GitHub Pages:** push to a repository, then in *Settings → Pages* choose *GitHub Actions* as the source. The included workflow builds and publishes on every push to `main`, and sets `baseurl` automatically.
 - **Anywhere else:** run `JEKYLL_ENV=production bundle exec jekyll build` and upload the `_site` folder. If the site lives under a sub-path, set `baseurl` in `_config.yml`.
+
+## Troubleshooting
+
+**`Installing Bundler … gem failed with exit code 1` on GitHub Actions.** The workflow is using Ruby 3.1, which the current version of Bundler no longer supports. GitHub's suggested "Jekyll" workflow (`.github/workflows/jekyll.yml`) pins Ruby 3.1. Delete that file and keep `.github/workflows/pages.yml` from this project, which uses Ruby 3.3. If you'd rather keep GitHub's file, change its `ruby-version: '3.1'` to `ruby-version: '3.3'`.
+
+Only one workflow should deploy to Pages, so keep just one of them.
